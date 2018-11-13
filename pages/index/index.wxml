@@ -1,0 +1,17 @@
+<view class="page">
+  <view class='bg-box' style="height: {{Height}}px;">
+    <image src="{{ bgList[countryIndex] }}"></image>
+  </view>
+  <!--view class='change-box'>
+    <view class='change-span'>
+      <picker bindchange="bindCountryChange" value="{{countryIndex}}" range="{{countries}}">
+        <view class="weui-select">{{countries[countryIndex]}}</view>
+      </picker>
+    </view>
+  </view-->
+  <view class='btn-box' style='top:{{BtnTop}}px;'>
+    <button class="weui-btn ai" type="warn" bindtap='goToAi'>AI把文物带回家</button>
+    <button class="weui-btn robot" type="warn" bindtap='goToRobot'>导游机器人</button>
+    <button class="weui-btn map" type="warn" bindtap='goToMap' wx:if="{{ countryIndex == 0}}">智能导览</button>
+  </view>
+</view>
